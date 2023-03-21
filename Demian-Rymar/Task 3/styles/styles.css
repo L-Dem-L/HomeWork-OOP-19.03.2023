@@ -1,0 +1,59 @@
+.main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.doors {
+  position: relative;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.left,
+.right {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #333;
+  transition: transform 2s ease;
+}
+
+.left {
+  left: 0;
+  transform-origin: left;
+}
+
+.right {
+  right: 0;
+  transform-origin: right;
+}
+
+.doors:hover .left {
+  transform: translateX(-50%);
+}
+
+.doors:hover .right {
+  transform: translateX(50%);
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5em;
+  color: black;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 2s ease;
+}
+
+.doors:hover + .text {
+  opacity: 1;
+}/*# sourceMappingURL=styles.css.map */
